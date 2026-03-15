@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
    // MyApp()
-    MiCardApp()
+   // MiCardApp()
+    FlutterCard()
   );
 }
 
@@ -54,7 +55,102 @@ void main() {
 //   }
 // }
 
-class MiCardApp extends StatelessWidget {
+// class MiCardApp extends StatelessWidget {
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         backgroundColor: Colors.teal.shade900,
+//         body: SafeArea(
+//             child: Column(
+//               children: [
+//                 CircleAvatar(
+//                   radius: 50.0,
+//                   backgroundImage: AssetImage('image/Rishav.png'),
+//                 ),
+//                 Text(
+//                   'Rishav',
+//                   style: TextStyle(
+//                     fontFamily: 'Pacifico',
+//                     fontSize: 30.0,
+//                     color: Colors.white,
+//                     fontWeight: FontWeight(100),
+//                   ),
+//                 ),
+//                 Text(
+//                   'FLUTTER DEVELOPER',
+//                   style: TextStyle(
+//                     fontFamily: 'Oswald',
+//                     fontSize: 20.0,
+//                     letterSpacing: 2.5,
+//                     fontWeight: FontWeight.bold,
+//                     color:Colors.teal.shade200,
+//                   ),
+//                 ),
+//
+//                 //a new container "Row" Reason: Elements inside ordered in Row
+//                 Container(
+//                   margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+//                   padding: EdgeInsets.all(10.0),
+//                   color: Colors.white,
+//                   child: Row(
+//                     children: [
+//                       Icon(
+//                         Icons.phone,
+//                         size: 20.0,
+//                         color: Colors.teal.shade900,
+//                       ),
+//                       SizedBox(width: 10.0,),
+//                       Text(
+//                         '+91 9876543210',
+//                         style: TextStyle(
+//                             color: Colors.teal.shade900,
+//                           fontFamily: 'Oswald',
+//                           letterSpacing: 1.1,
+//                           fontWeight: FontWeight.bold,
+//                         ),
+//                       )
+//                     ],
+//                   ),
+//                 ),
+//
+//                 Container(
+//                   margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+//                   padding: EdgeInsets.all(10.0),
+//                   decoration: BoxDecoration(
+//                     borderRadius: BorderRadius.circular(10),
+//                     color: Colors.white,
+//                   ),
+//
+//                   child: Row(
+//                     children: [
+//                       Icon(
+//                         Icons.email,
+//                         size: 20.0,
+//                         color: Colors.teal.shade900,
+//                       ),
+//                       SizedBox(width: 10.0,),
+//                       Text(
+//                         'rishav1072003@gmail.com',
+//                         style: TextStyle(
+//                           color: Colors.teal.shade900,
+//                           fontFamily: 'Oswald',
+//                           fontWeight: FontWeight(600) ,
+//                         ),
+//                       )
+//                     ],
+//                   ),
+//                 ),
+//               ],
+//             ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+class FlutterCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -62,87 +158,86 @@ class MiCardApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal.shade900,
         body: SafeArea(
-            child: Column(
-              children: [
-                CircleAvatar(
-                  radius: 50.0,
-                  backgroundImage: AssetImage('image/Rishav.png'),
-                ),
-                Text(
-                  'Rishav',
-                  style: TextStyle(
-                    fontFamily: 'Pacifico',
-                    fontSize: 30.0,
-                    color: Colors.white,
-                    fontWeight: FontWeight(100),
-                  ),
-                ),
-                Text(
-                  'FLUTTER DEVELOPER',
-                  style: TextStyle(
-                    fontFamily: 'Oswald',
-                    fontSize: 20.0,
-                    letterSpacing: 2.5,
-                    fontWeight: FontWeight.bold,
-                    color:Colors.teal.shade200,
-                  ),
-                ),
-
-                //a new container "Row" Reason: Elements inside ordered in Row
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                  padding: EdgeInsets.all(10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('image/Rishav.png'),
+              ),
+              Text(
+                'Rishav',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 30.0,
                   color: Colors.white,
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.phone,
-                        size: 20.0,
+                  fontWeight: FontWeight(100),
+                ),
+              ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontFamily: 'Oswald',
+                  fontSize: 20.0,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+                  color:Colors.teal.shade200,
+                ),
+              ),
+
+              //For space apply Sized Box
+              SizedBox(
+                  height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+
+              //a new container "Row" Reason: Elements inside ordered in Row
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                color: Colors.white,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    size: 20.0,
+                    color: Colors.teal.shade900,
+                  ),
+                  title: Text(
+                      '+91 9876543210',
+                      style: TextStyle(
                         color: Colors.teal.shade900,
+                        fontFamily: 'Oswald',
+                        letterSpacing: 1.1,
+                        fontWeight: FontWeight.bold,
                       ),
-                      SizedBox(width: 10.0,),
-                      Text(
-                        '+91 9876543210',
-                        style: TextStyle(
-                            color: Colors.teal.shade900,
-                          fontFamily: 'Oswald',
-                          letterSpacing: 1.1,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )
-                    ],
                   ),
                 ),
+              ),
 
-                Container(
+              Card(
+                color: Colors.white,
                   margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                  padding: EdgeInsets.all(10.0),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,
-                  ),
 
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.email,
-                        size: 20.0,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    size: 20.0,
+                    color: Colors.teal.shade900,
+                  ),
+                  title:  Text(
+                      'rishav1072003@gmail.com',
+                      style: TextStyle(
                         color: Colors.teal.shade900,
+                        fontFamily: 'Oswald',
+                        fontWeight: FontWeight(600) ,
                       ),
-                      SizedBox(width: 10.0,),
-                      Text(
-                        'rishav1072003@gmail.com',
-                        style: TextStyle(
-                          color: Colors.teal.shade900,
-                          fontFamily: 'Oswald',
-                          fontWeight: FontWeight(600) ,
-                        ),
-                      )
-                    ],
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
+          ),
         ),
       ),
     );
